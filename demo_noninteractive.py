@@ -15,9 +15,9 @@ class App:
         self.c.z = -4.55
 
         for i in range(1, 100):
-            self.points = self.points + ((random.randint(-2, 2),
-                random.randint(-2, 2),
-                random.randint(-2, 2)), )
+            self.points = self.points + ((random.uniform(-2, 2),
+                random.uniform(-2, 2),
+                random.uniform(-2, 2)), )
         pyxel.run(self.update, self.draw)
 
     def draw(self):
@@ -32,7 +32,7 @@ class App:
            self.c.line((-1, i/10,  1), (1,  i/10,  1), 7)
 
     def update(self):
-        self.c.theta += 0.01
+        self.c.theta += 0.05
 
         if pyxel.btnp(pyxel.KEY_Q):
             pyxel.quit()

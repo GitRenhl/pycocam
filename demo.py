@@ -15,9 +15,9 @@ class App:
         self.c.z = -4.5
 
         for i in range(1, 100):
-            self.points = self.points + ((random.randint(-2, 2),
-                random.randint(-2, 2),
-                random.randint(-2, 2)), )
+            self.points = self.points + ((random.uniform(-2, 2),
+                random.uniform(-2, 2),
+                random.uniform(-2, 2)), )
         pyxel.run(self.update, self.draw)
 
     def draw(self):
