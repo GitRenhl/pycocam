@@ -17,7 +17,7 @@ class Pycocam:
 
     def point(self, p, col):
         px = self._coordstopx(self._perspective(p))
-        pyxel.pix(px[0], px[1], col)
+        pyxel.pset(px[0], px[1], col)
 
     def _perspective(self, p):
         x = p[0]
