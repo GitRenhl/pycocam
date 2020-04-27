@@ -37,7 +37,7 @@ class Pycocam:
             px = self._coordstopx(self._perspective(p))
         except ZeroDivisionError:
             return
-        pyxel.pix(px[0], px[1], col)
+        pyxel.pset(px[0], px[1], col)
 
     def _perspective(self, p):
         x, y, z = p

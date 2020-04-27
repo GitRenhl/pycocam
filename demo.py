@@ -24,7 +24,7 @@ class App:
         pyxel.cls(0)
         for i in range(0, len(self.points)):
             self.c.point(self.points[i], (i % 15) + 1)
-        
+
         for i in range(-20, 20, 3):
            self.c.line((1,  i/10,  1), (1,  i/10, -1), 7)
            self.c.line((1,  i/10, -1), (-1, i/10, -1), 7)
@@ -32,16 +32,16 @@ class App:
            self.c.line((-1, i/10,  1), (1,  i/10,  1), 7)
 
     def update(self):
-        if pyxel.btnp(pyxel.KEY_Q):
+        if pyxel.btn(pyxel.KEY_Q):
             pyxel.quit()
 
-        if pyxel.btnp(pyxel.KEY_UP):
+        if pyxel.btn(pyxel.KEY_UP):
             self.c.z += 0.01
-        if pyxel.btnp(pyxel.KEY_DOWN):
+        if pyxel.btn(pyxel.KEY_DOWN):
             self.c.z -= 0.01
-        if pyxel.btnp(pyxel.KEY_LEFT):
+        if pyxel.btn(pyxel.KEY_LEFT):
             self.c.theta += 0.01
-        if pyxel.btnp(pyxel.KEY_RIGHT):
+        if pyxel.btn(pyxel.KEY_RIGHT):
             self.c.theta -= 0.01
 
 App()
